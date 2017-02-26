@@ -2,8 +2,8 @@
 
 1. Remove packages we don't need.  
   ```
-  apt-get purge apache* samba* bind9* exim4* postfix* -y  
-  apt-get autoremove --purge -y
+apt-get purge apache* samba* bind9* exim4* postfix* -y  
+apt-get autoremove --purge -y
   ```
 2. Install curl
 ```
