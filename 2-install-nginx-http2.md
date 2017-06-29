@@ -12,13 +12,13 @@ cd /usr/local/src/
 ```
 3. Get newer version of OpenSSL. (This is for compling only, do not replace OpenSSL on your OS.)
 ```
-wget https://www.openssl.org/source/openssl-1.1.0e.tar.gz  
-tar -xzvf openssl-1.1.0e.tar.gz
+wget https://www.openssl.org/source/openssl-1.1.0f.tar.gz  
+tar -xzvf openssl-1.1.0f.tar.gz
 ```
 4. Get ngx_cache_purge module
 ```
-wget https://github.com/FRiCKLE/ngx_cache_purge/archive/2.3.tar.gz
-tar -xzvf 2.3.tar.gz
+wget https://github.com/nginx-modules/ngx_cache_purge/archive/2.4.1.tar.gz
+tar -xzvf 2.4.1.tar.gz
 ```
 5. Grab latest GeoIP data
 ```
@@ -30,7 +30,7 @@ gunzip GeoIP.dat.gz
 5. Get newer version of Nginx.
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.11.10  
+NGINX_VERSION=1.13.2
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
@@ -41,7 +41,7 @@ service nginx stop
 ```
 7. Set config with new params.
 ```
-./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-file-aio --with-threads --with-ipv6 --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_geoip_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_ssl_module --with-cc-opt='-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -Wl,--as-needed' --with-openssl=/usr/local/src/openssl-1.1.0e --add-module=/usr/local/src/ngx_cache_purge-2.3
+./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-file-aio --with-threads --with-ipv6 --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_geoip_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_ssl_module --with-cc-opt='-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -Wl,--as-needed' --with-openssl=/usr/local/src/openssl-1.1.0f --add-module=/usr/local/src/ngx_cache_purge-2.4.1
 ```
 8. Make / Install
 ```
