@@ -30,7 +30,7 @@ gunzip GeoIP.dat.gz
 5. Get newer version of Nginx.
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.13.2
+NGINX_VERSION=1.13.4
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
