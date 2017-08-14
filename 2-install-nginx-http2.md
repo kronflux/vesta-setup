@@ -2,7 +2,7 @@
 
 Installing a new version of Nginx from source will mean that you can no longer receive updates for Nginx from apt-get.
 
-1. Install package used for complie
+1. Install packages used for compiling
 ```
 apt-get install dpkg-dev libpcrecpp0 libgd2-xpm-dev libgeoip-dev libgeoip1 libperl-dev libpcre3 libpcre3-dev logrotate geoip-database zip unzip
 ```
