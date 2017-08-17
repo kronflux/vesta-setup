@@ -85,6 +85,8 @@ In the following files:
 /usr/local/vesta/data/templates/web/nginx/default.stpl
 /usr/local/vesta/data/templates/web/nginx/hosting.stpl
 /usr/local/vesta/data/templates/web/nginx/caching.stpl
+/usr/local/vesta/data/templates/web/nginx/php-fpm/default.tpl
+/usr/local/vesta/data/templates/web/nginx/php-fpm/default.stpl
 ```
 add:
 ```
@@ -102,8 +104,19 @@ location ~ "\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+" { add_header "" ""
 location ~ "^/pagespeed_static/" { }
 location ~ "^/ngx_pagespeed_beacon$" { }
 ```
-before the include line (ex: `include %home%/%user%/conf/web/nginx.%domain%.conf*; )
-
+before the include line which looks something like this:
+```
+include %home%/%user%/conf/web/nginx.%domain%.conf*;
+```
+In the files ending in .stpl change the listen line from:
+```
+listen      %ip%:%proxy_ssl_port%;
+```
+to:
+```
+listen      %ip%:%proxy_ssl_port% spdy;
+```
+Now, restart nginx.
 ```
 service nginx restart
 ```
