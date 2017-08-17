@@ -114,7 +114,7 @@ listen      %ip%:%proxy_ssl_port%;
 ```
 to:
 ```
-listen      %ip%:%proxy_ssl_port% spdy;
+listen      %ip%:%proxy_ssl_port% ssl http2;
 ```
 Now, restart nginx.
 ```
