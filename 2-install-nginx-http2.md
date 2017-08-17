@@ -1,4 +1,4 @@
-## Nginx HTTP/2 with GeoIP and ngx_cache_purge support
+## Nginx HTTP/2 with GeoIP, ngx_cache_purge and Google's ngx_pagespeed support
 
 Installing a new version of Nginx from source will mean that you can no longer receive updates for Nginx from apt-get.
 
