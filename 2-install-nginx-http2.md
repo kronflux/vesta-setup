@@ -76,18 +76,34 @@ If testing locally, then generate a CSR and paste in the SSL Key.
 
 If on a real server use the new Let's Encrpt VestaCP GUI to install an SSL Cert for your domain.
 
-Edit the snginx.conf file for the domain
+Now we need to edit the VestaCP templates to use Pagespeed and HTTP2.
+In the following files:
+```
+/usr/local/vesta/data/templates/web/nginx/default.tpl
+/usr/local/vesta/data/templates/web/nginx/hosting.tpl
+/usr/local/vesta/data/templates/web/nginx/caching.tpl
+/usr/local/vesta/data/templates/web/nginx/default.stpl
+/usr/local/vesta/data/templates/web/nginx/hosting.stpl
+/usr/local/vesta/data/templates/web/nginx/caching.stpl
+```
+add:
+```
+pagespeed On;
+pagespeed RewriteLevel CoreFilters;
 
-e.g. /home/admin/conf/web/snginx.conf
+# HTTPS Support
+pagespeed FetchHttps enable,allow_self_signed;
 
-add 'ssl http2' to the listen line of nginx config file for your domain.
+pagespeed EnableFilters lazyload_images,collapse_whitespace,insert_dns_prefetch,dedup_inlined_images,defer_javascript,pedantic,trim_urls,sprite_images,extend_cache_pdfs,remove_comments,resize_mobile_images,inline_preview_images,insert_image_dimensions,convert_to_webp_lossless,local_storage_cache,inline_google_font_css,prioritize_critical_css,rewrite_style_attributes,move_css_to_head,move_css_above_scripts,outline_javascript,outline_css,combine_heads;
 
-server {
-	listen 192.168.1.151:443 ssl http2;
-	...
-}
+pagespeed FileCachePath /var/ngx_pagespeed_cache;
 
-Note: Might be better to update the main templates stored by VestaCP templates and rebuild from the Web GUI.
+location ~ "\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+" { add_header "" ""; }
+location ~ "^/pagespeed_static/" { }
+location ~ "^/ngx_pagespeed_beacon$" { }
+```
+before the include line (ex: `include %home%/%user%/conf/web/nginx.%domain%.conf*; )
+
 ```
 service nginx restart
 ```
