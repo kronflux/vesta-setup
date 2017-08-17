@@ -29,7 +29,10 @@ CACHEPURGE_VERSION=2.4.1
 wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-modules/ngx_cache_purge/archive/${CACHEPURGE_VERSION}.tar.gz
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
-6. Get ngx_pagespeed module and psol libraries (currently needs https://github.com/pagespeed/ngx_pagespeed/pull/1453 to compile)
+6. Get ngx_pagespeed module and psol libraries
+(currently needs https://github.com/pagespeed/ngx_pagespeed/pull/1453 to compile.
+full file to replace is available here:
+https://gist.githubusercontent.com/kronflux/4f7dad66d63f8d29c5f0bb757aa34667/raw/e4a492e537cd2c72e46119d057b620f4072961cd/ngx_pagespeed.cc )
 ```
 PAGESPEED_VERSION=1.12.34.2
 wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/pagespeed/ngx_pagespeed/archive/v${PAGESPEED_VERSION}-stable.zip
