@@ -46,7 +46,7 @@ rm ngx_pagespeed_psol-${PAGESPEED_VERSION}-x64.tar.gz
 7. Get newer version of Nginx
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.13.4
+NGINX_VERSION=1.13.5
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
