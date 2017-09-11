@@ -16,6 +16,6 @@ curl -O http://vestacp.com/pub/vst-install.sh
 4. Run following bash command to install Nginx / PHP-FPM / MariaDB.  
    Update below command if you need Exim / FTP / Firewall etc. Generate new commands here: https://vestacp.com/#install
 ```
-bash vst-install.sh --nginx yes --phpfpm yes --apache no --vsftpd no --proftpd yes --exim no --dovecot no --spamassassin no --clamav no --named no --iptables yes --fail2ban yes --mysql yes --postgresql no --remi no --quota no --hostname YourHostName --email You@YourEmail.com --password YourPassword
+bash vst-install.sh --nginx yes --phpfpm yes --apache no --vsftpd no --proftpd yes --exim no --dovecot no --spamassassin no --clamav no --named yes --iptables yes --fail2ban yes --mysql yes --postgresql no --remi no --quota no --hostname YourHostName --email You@YourEmail.com --password YourPassword
 ```
 5. Follow the setup instructions.
