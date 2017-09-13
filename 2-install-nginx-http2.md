@@ -10,8 +10,11 @@ apt-get install build-essential dpkg-dev geoip-database libgd2-xpm-dev libgeoip-
 ```
 cd /usr/share/GeoIP  
 wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz  
+wget http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz  
 mv GeoIP.dat GeoIP.dat.bak  
+mv GeoIPv6.dat GeoIPv6.dat.bak
 gunzip GeoIP.dat.gz  
+gunzip GeoIPv6.dat.gz
 ```
 3. Go to the source directory
 ```
