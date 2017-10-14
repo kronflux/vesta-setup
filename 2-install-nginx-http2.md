@@ -28,7 +28,7 @@ tar -xzvf openssl-${OPENSSL_VERSION}.tar.gz
 ```
 5. Get ngx_cache_purge module
 ```
-CACHEPURGE_VERSION=2.4.1
+CACHEPURGE_VERSION=2.4.2
 wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-modules/ngx_cache_purge/archive/${CACHEPURGE_VERSION}.tar.gz
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
@@ -37,7 +37,7 @@ tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 full file to replace is available here:
 https://gist.githubusercontent.com/kronflux/4f7dad66d63f8d29c5f0bb757aa34667/raw/e4a492e537cd2c72e46119d057b620f4072961cd/ngx_pagespeed.cc )
 ```
-PAGESPEED_VERSION=1.12.34.2
+PAGESPEED_VERSION=1.12.34.3
 wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/pagespeed/ngx_pagespeed/archive/v${PAGESPEED_VERSION}-stable.zip
 unzip ngx_pagespeed-${PAGESPEED_VERSION}.zip
 mv ngx_pagespeed-${PAGESPEED_VERSION}-stable ngx_pagespeed-${PAGESPEED_VERSION}
@@ -49,7 +49,7 @@ rm ngx_pagespeed_psol-${PAGESPEED_VERSION}-x64.tar.gz
 7. Get newer version of Nginx
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.13.5
+NGINX_VERSION=1.13.6
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
