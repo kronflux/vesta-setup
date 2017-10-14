@@ -33,18 +33,16 @@ wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-mo
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
 6. Get ngx_pagespeed module and psol libraries
-(currently needs https://github.com/pagespeed/ngx_pagespeed/pull/1453 to compile.
-full file to replace is available here:
-https://gist.githubusercontent.com/kronflux/4f7dad66d63f8d29c5f0bb757aa34667/raw/e4a492e537cd2c72e46119d057b620f4072961cd/ngx_pagespeed.cc )
 ```
 PAGESPEED_VERSION=1.12.34.3
+PSOL_VERSION=1.12.34.2
 wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/pagespeed/ngx_pagespeed/archive/v${PAGESPEED_VERSION}-stable.zip
 unzip ngx_pagespeed-${PAGESPEED_VERSION}.zip
 mv ngx_pagespeed-${PAGESPEED_VERSION}-stable ngx_pagespeed-${PAGESPEED_VERSION}
 cd ngx_pagespeed-${PAGESPEED_VERSION}/
-wget -O ngx_pagespeed_psol-${PAGESPEED_VERSION}-x64.tar.gz https://dl.google.com/dl/page-speed/psol/${PAGESPEED_VERSION}-x64.tar.gz
-tar -xzvf ngx_pagespeed_psol-${PAGESPEED_VERSION}-x64.tar.gz
-rm ngx_pagespeed_psol-${PAGESPEED_VERSION}-x64.tar.gz
+wget -O ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz https://dl.google.com/dl/page-speed/psol/${PSOL_VERSION}-x64.tar.gz
+tar -xzvf ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz
+rm ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz
 ```
 7. Get newer version of Nginx
 ```
