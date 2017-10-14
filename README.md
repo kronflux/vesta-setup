@@ -1,6 +1,6 @@
 # VestaCP with Nginx, PHP7-FPM, Memcached, MariaDB, PhpMyAdmin, HTTP/2 and Google's PageSpeed
 
-## TODO: Mark nginx package on hold in apt, drop-in replace mysql with mariadb, secure mariadb, 
+## TODO: Mark nginx package on hold in apt, drop-in replace mysql with mariadb, secure mariadb
 
 Use at your own risk.
 
