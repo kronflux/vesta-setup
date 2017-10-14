@@ -1,5 +1,7 @@
 # VestaCP with Nginx, PHP7-FPM, Memcached, MariaDB, PhpMyAdmin, HTTP/2 and Google's PageSpeed
 
+TODO: Mark nginx package on hold in apt, drop-in replace mysql with mariadb, secure mariadb, 
+
 Use at your own risk.
 
 Setup assumes Debian 8.x fresh install.
@@ -12,6 +14,7 @@ Test this on a local VM before executing on your live servers.
 
 Resources:
 
+https://github.com/creativedotdesign/vesta-setup
 https://forum.vestacp.com/viewtopic.php?f=20&t=12522  
 https://forum.vestacp.com/viewtopic.php?t=12732  
 https://www.linuxbabe.com/nginx/enable-http2-debian-8-nginx-web-server  
