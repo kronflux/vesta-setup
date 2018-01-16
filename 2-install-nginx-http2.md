@@ -38,7 +38,7 @@ PAGESPEED_VERSION=1.13.35.2-beta
 PSOL_VERSION=1.13.35.2
 wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/apache/incubator-pagespeed-ngx/archive/v${PAGESPEED_VERSION}.zip
 unzip ngx_pagespeed-${PAGESPEED_VERSION}.zip
-mv ngx_pagespeed-${PAGESPEED_VERSION} ngx_pagespeed-${PAGESPEED_VERSION}
+mv incubator-pagespeed-ngx-${PAGESPEED_VERSION} ngx_pagespeed-${PAGESPEED_VERSION}
 cd ngx_pagespeed-${PAGESPEED_VERSION}/
 wget -O ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz https://dl.google.com/dl/page-speed/psol/${PSOL_VERSION}-x64.tar.gz
 tar -xzvf ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz
