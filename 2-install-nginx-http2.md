@@ -34,9 +34,9 @@ tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
 6. Get ngx_pagespeed module and psol libraries
 ```
-PAGESPEED_VERSION=1.12.34.3
-PSOL_VERSION=1.12.34.2
-wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/pagespeed/ngx_pagespeed/archive/v${PAGESPEED_VERSION}-stable.zip
+PAGESPEED_VERSION=1.13.35.2-beta
+PSOL_VERSION=1.13.35.2
+wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/apache/incubator-pagespeed-ngx/archive/v${PAGESPEED_VERSION}.zip
 unzip ngx_pagespeed-${PAGESPEED_VERSION}.zip
 mv ngx_pagespeed-${PAGESPEED_VERSION}-stable ngx_pagespeed-${PAGESPEED_VERSION}
 cd ngx_pagespeed-${PAGESPEED_VERSION}/
