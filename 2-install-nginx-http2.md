@@ -22,7 +22,7 @@ cd /usr/local/src/
 ```
 4. Get newer version of OpenSSL. (This is for compling only, do not replace OpenSSL on your OS.)
 ```
-OPENSSL_VERSION=1.1.0g
+OPENSSL_VERSION=1.1.1-pre1
 wget -O openssl-${OPENSSL_VERSION}.tar.gz https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 tar -xzvf openssl-${OPENSSL_VERSION}.tar.gz
 ```
@@ -34,7 +34,7 @@ tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
 6. Get ngx_pagespeed module and psol libraries
 ```
-PAGESPEED_VERSION=1.13.35.2-beta
+PAGESPEED_VERSION=v1.13.35.2-stable
 PSOL_VERSION=1.13.35.2
 wget -O ngx_pagespeed-${PAGESPEED_VERSION}.zip https://github.com/apache/incubator-pagespeed-ngx/archive/v${PAGESPEED_VERSION}.zip
 unzip ngx_pagespeed-${PAGESPEED_VERSION}.zip
@@ -47,7 +47,7 @@ rm ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz
 7. Get newer version of Nginx
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.13.8
+NGINX_VERSION=1.13.9
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
