@@ -22,7 +22,7 @@ cd /usr/local/src/
 ```
 4. Get newer version of OpenSSL. (This is for compling only, do not replace OpenSSL on your OS.)
 ```
-OPENSSL_VERSION=1.1.1-pre1
+OPENSSL_VERSION=1.1.1-pre2
 wget -O openssl-${OPENSSL_VERSION}.tar.gz https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 tar -xzvf openssl-${OPENSSL_VERSION}.tar.gz
 ```
