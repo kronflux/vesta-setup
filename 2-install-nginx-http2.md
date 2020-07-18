@@ -27,30 +27,31 @@ cd /usr/local/src/
 OPENSSL_VERSION=1.1.1g
 wget -O openssl-${OPENSSL_VERSION}.tar.gz https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 tar -xzvf openssl-${OPENSSL_VERSION}.tar.gz
+rm openssl-${OPENSSL_VERSION}.tar.gz
 ```
 5. Get ngx_cache_purge module
 ```
 CACHEPURGE_VERSION=2.5.1
 wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-modules/ngx_cache_purge/archive/${CACHEPURGE_VERSION}.tar.gz
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
+rm ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
-7. Get newer version of Nginx
-```
-cd /usr/local/src  
+6. Get newer version of Nginx
+```  
 NGINX_VERSION=1.19.1
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
 ```
-8. Stop the existing Nginx service
+7. Stop the existing Nginx service
 ```
 service nginx stop
 ```
-9. Mark the Nginx package on hold in Apt
+8. Mark the Nginx package on hold in Apt
 ```
 apt-mark hold nginx nginx-full nginx-common
 ```
-10. Set config with new params
+9. Set config with new params
 ```
 ./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-file-aio --with-threads --with-ipv6 --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_geoip_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-http_v3_module --with-mail --with-mail_ssl_module --with-stream --with-stream_ssl_module --with-cc-opt='-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -Wl,--as-needed' --with-openssl=/usr/local/src/openssl-${OPENSSL_VERSION} --add-module=/usr/local/src/ngx_cache_purge-${CACHEPURGE_VERSION}
 ```
