@@ -17,8 +17,6 @@ gunzip maxmind4.dat.gz
 gunzip maxmind6.dat.gz
 mv maxmind4.dat GeoIP.dat
 mv maxmind6.dat GeoIPv6.dat
-rm maxmind4.dat.gz
-rm maxmind6.dat.gz
 ```
 3. Go to the source directory
 ```
