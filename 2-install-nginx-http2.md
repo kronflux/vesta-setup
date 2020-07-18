@@ -22,13 +22,13 @@ cd /usr/local/src/
 ```
 4. Get newer version of OpenSSL. (This is for compling only, do not replace OpenSSL on your OS.)
 ```
-OPENSSL_VERSION=1.1.1d
+OPENSSL_VERSION=1.1.1g
 wget -O openssl-${OPENSSL_VERSION}.tar.gz https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 tar -xzvf openssl-${OPENSSL_VERSION}.tar.gz
 ```
 5. Get ngx_cache_purge module
 ```
-CACHEPURGE_VERSION=2.5
+CACHEPURGE_VERSION=2.5.1
 wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-modules/ngx_cache_purge/archive/${CACHEPURGE_VERSION}.tar.gz
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```
@@ -47,7 +47,7 @@ rm ngx_pagespeed_psol-${PSOL_VERSION}-x64.tar.gz
 7. Get newer version of Nginx
 ```
 cd /usr/local/src  
-NGINX_VERSION=1.17.6
+NGINX_VERSION=1.19.1
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
 tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
