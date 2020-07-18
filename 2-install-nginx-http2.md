@@ -40,7 +40,7 @@ rm ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 ```  
 NGINX_VERSION=1.19.1
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz  
-tar -xvzf nginx-${NGINX_VERSION}.tar.gz  
+tar -xzvf nginx-${NGINX_VERSION}.tar.gz  
 cd nginx-${NGINX_VERSION}/
 ```
 7. Stop the existing Nginx service
