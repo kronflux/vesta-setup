@@ -1,4 +1,4 @@
-## Nginx HTTP/2 with GeoIP, ngx_cache_purge
+## Nginx HTTP/2 with GeoIP, ngx_cache_purge and quiche
 
 Installing a new version of Nginx from source will mean that you can no longer receive updates for Nginx from apt-get.
 
@@ -35,6 +35,13 @@ CACHEPURGE_VERSION=2.5.1
 wget -O ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz https://github.com/nginx-modules/ngx_cache_purge/archive/${CACHEPURGE_VERSION}.tar.gz
 tar -xzvf ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
 rm ngx_cache_purge-${CACHEPURGE_VERSION}.tar.gz
+```
+7. Get quiche module
+```
+QUICHE_VERSION=0.5.1
+wget -O quiche-${QUICHE_VERSION}.tar.gz https://github.com/cloudflare/quiche/archive/${QUICHE_VERSION}.tar.gz
+tar -xzvf quiche-${QUICHE_VERSION}.tar.gz
+rm quiche-${QUICHE_VERSION}.tar.gz
 ```
 6. Get newer version of Nginx
 ```  
